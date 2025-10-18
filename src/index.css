@@ -1,0 +1,32 @@
+/* src/index.css */
+
+@import "tailwindcss";
+
+@theme {
+  /* Konfigurasi Warna dari :root */
+  --color-navy: #07263b;
+  --color-accent: #e5c95f; /* orange-yellowish */
+  --color-muted: #6b7280;
+  --color-soft: #f6f9fb;
+
+  /* Konfigurasi Font */
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Gaya Dasar Global */
+html {
+  /* Untuk smooth scrolling dari anchor link */
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-inter bg-gradient-to-b from-[#f8fbff] to-[#fbfdff] text-slate-900 antialiased;
+}
+
+/* Helper untuk scrollbar horizontal */
+.horizontal-track::-webkit-scrollbar {
+  height: 10px;
+}
+.horizontal-track::-webkit-scrollbar-thumb {
+  @apply bg-navy/10 rounded-full;
+}
